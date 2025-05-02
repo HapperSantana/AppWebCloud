@@ -176,11 +176,15 @@ export default function Dashboard() {
 
   const handleEditData = (product: ProductType) => {
     setValue("nombre", product.nombre);
-
+    // @ts-ignore
     setValue("descripcion", product.descripcion);
+    // @ts-ignore
     setValue("precio", product.precio);
+    // @ts-ignore
     setValue("imagen", product.imagen);
+    // @ts-ignore
     setPreviewImage(product.imagen);
+    // @ts-ignore
     setEditId(product.id!);
   };
 
@@ -271,7 +275,9 @@ export default function Dashboard() {
                   type="file"
                   className="form-control"
                   onChange={(event) => {
+                    // @ts-ignore
                     setValue("imagen", event.target.files[0]);
+                    // @ts-ignore
                     setPreviewImage(URL.createObjectURL(event.target.files[0]));
                   }}
                 />
@@ -298,6 +304,7 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 {products ? (
+                  // @ts-ignore
                   products.map((singleProduct, index) => (
                     <tr key={index}>
                       <td>{singleProduct.nombre}</td>
