@@ -67,13 +67,6 @@ const Navbar = () => {
             >
               <CiLogin size={30} />
             </Link>
-
-            {/* <Link
-              className="text-white text-decoration-none"
-              href="/auth/login"
-            >
-              Ingresar
-            </Link> */}
           </div>
         )}
       </nav>

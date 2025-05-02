@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { myAppHook } from "@/context/AppUtils";
@@ -336,7 +335,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

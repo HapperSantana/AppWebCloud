@@ -1,6 +1,5 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabaseClient";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
@@ -134,7 +133,6 @@ export default function Login() {
           </a>
         </p>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

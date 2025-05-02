@@ -1,6 +1,5 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import supabaseLogo from "../public/Supabase_Logo2.png";
 import bootstrapLogo from "../public/bootstrap-logo-vector.png";
@@ -110,7 +109,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

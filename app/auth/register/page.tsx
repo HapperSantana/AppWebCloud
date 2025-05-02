@@ -1,7 +1,6 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -152,7 +151,6 @@ export default function Register() {
           </a>
         </p>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

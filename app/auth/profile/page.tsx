@@ -1,6 +1,5 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { myAppHook } from "@/context/AppUtils";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
@@ -48,8 +47,6 @@ export default function Profile() {
       ) : (
         <p>No se encontro un perfil</p>
       )}
-
-      {/* <Footer /> */}
     </>
   );
 }
