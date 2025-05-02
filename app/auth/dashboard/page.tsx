@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
+/* @ts-ignore */
 
 "use client";
 import Image from "next/image";
@@ -167,6 +168,7 @@ export default function Dashboard() {
       .eq("user_id", userId);
 
     if (data) {
+      // @ts-ignore
       setProducts(data);
     }
     setIsLoading(false);
@@ -174,6 +176,7 @@ export default function Dashboard() {
 
   const handleEditData = (product: ProductType) => {
     setValue("nombre", product.nombre);
+
     setValue("descripcion", product.descripcion);
     setValue("precio", product.precio);
     setValue("imagen", product.imagen);
