@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import Loader from "@/components/Loader";
 import React, { createContext, useContext, useEffect, useState } from "react";
