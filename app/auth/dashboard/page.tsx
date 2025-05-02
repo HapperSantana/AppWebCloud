@@ -72,8 +72,8 @@ export default function Dashboard() {
         setUserId(data.session?.user.id);
         localStorage.setItem("access_token", data.session?.access_token);
         setIsLoggedIn(true);
+        // @ts-ignore
         setUserProfile({
-          // @ts-ignore
           name: data.session.user?.user_metadata.fullName,
           email: data.session.user?.user_metadata.email,
           gender: data.session.user?.user_metadata.gender,
