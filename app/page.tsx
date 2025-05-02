@@ -1,95 +1,116 @@
+"use client";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
-import styles from "./page.module.css";
+import supabaseLogo from "../public/Supabase_Logo2.png";
+import bootstrapLogo from "../public/bootstrap-logo-vector.png";
+import googleGithubLogo from "../public/google-github.jpg";
+import renderLogo from "@/public/portfolio-render-updated.png";
+import vscodeLogo from "@/public/vs-code-logo.png";
+import nextjsLogo from "@/public/next-js-logo.png";
+import { useRouter } from "next/navigation";
+import { CiLogin } from "react-icons/ci";
 
 export default function Home() {
+  const router = useRouter();
+  const handleLoginRedirect = () => {
+    router.push("/auth/login");
+  };
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Navbar />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="container text-center py-5">
+        <header className="mb-5">
+          <h1 className="display-4 fw-bold">Producto Integrador</h1>
+          <p className="lead">
+            Aplicación web dinámica en un servicio de la nube
+          </p>
+          <button
+            className="btn btn-primary btn-lg"
+            onClick={handleLoginRedirect}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            Ingresar <CiLogin size={30} />
+          </button>
+        </header>
+
+        <section className="row g-4">
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Base de Datos Supabase</h5>
+                <p className="card-text">
+                  BD Postgres, la alternativa open source de firebase, rapida y
+                  segura.
+                </p>
+
+                <Image src={supabaseLogo} alt="" height={50} width={195} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Interfaz de usuario Responsiva</h5>
+                <p className="card-text">
+                  El framework responsivo mas popular para sitios HTML, CSS y
+                  JavaScript.
+                </p>
+                <Image src={bootstrapLogo} alt="" height={50} width={167} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Integracion de servicios Cloud</h5>
+                <p className="card-text">
+                  Autenticacion de usuarios con token de acceso y codigo de
+                  verificacion.
+                </p>
+                <Image src={googleGithubLogo} alt="" height={50} width={130} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Render</h5>
+                <p className="card-text">
+                  Crea, implementa y escala tus aplicaciones con una facilidad
+                  inigualableS.
+                </p>
+                <Image src={renderLogo} alt="" height={45} width={180} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Visual Studio Code</h5>
+                <p className="card-text">
+                  Combina la simplicidad de un editor de código con lo que los
+                  desarrolladores necesitan.
+                </p>
+                <Image src={vscodeLogo} alt="" height={45} width={180} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h5 className="card-title">Next JS</h5>
+                <p className="card-text">
+                  El framework de desarrollo front-end de React open source
+                  creado por Vercel.
+                </p>
+                <Image src={nextjsLogo} alt="" height={45} width={180} />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      {/* <Footer /> */}
+    </>
   );
 }
