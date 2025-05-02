@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 import Navbar from "@/components/Navbar";
 import { supabase } from "@/lib/supabaseClient";
@@ -65,6 +66,7 @@ export default function Login() {
       toast.error("Los datos son incorrectos");
     } else {
       if (data.session?.access_token) {
+        // @ts-ignore
         setAuthToken(data.session?.access_token);
         localStorage.setItem("access_token", data.session?.access_token);
         setIsLoggedIn(true);
