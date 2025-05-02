@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -65,11 +66,14 @@ export default function Dashboard() {
       }
       setIsLoading(true);
       if (data.session?.access_token) {
+        // @ts-ignore
         setAuthToken(data.session?.access_token);
+        // @ts-ignore
         setUserId(data.session?.user.id);
         localStorage.setItem("access_token", data.session?.access_token);
         setIsLoggedIn(true);
         setUserProfile({
+          // @ts-ignore
           name: data.session.user?.user_metadata.fullName,
           email: data.session.user?.user_metadata.email,
           gender: data.session.user?.user_metadata.gender,

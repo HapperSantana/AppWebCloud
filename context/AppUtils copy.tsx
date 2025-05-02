@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
-
 import Loader from "@/components/Loader";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
@@ -12,7 +10,6 @@ interface AppUtilsType {
   setUserProfile: (state: null) => void;
   setIsLoading: (state: boolean) => void;
 }
-
 const AppUtilsContext = createContext<AppUtilsType | undefined>(undefined);
 
 export const AppUtilsProvider = ({
@@ -26,12 +23,11 @@ export const AppUtilsProvider = ({
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token");
+    const token = localStorage.getItem("acces_token");
     const userProfile = localStorage.getItem("user_profile");
     if (token) {
       setAuthToken(token);
       setIsLoggedIn(true);
-      // @ts-expect-error
       setUserProfile(JSON.parse(userProfile));
     }
   }, []);
